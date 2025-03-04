@@ -17,7 +17,7 @@ def on_config(config):
     termes_sans_traduction_md.write_text("", encoding="utf-8")
     a=1
     files=1
-    on_env_eric(a,config,files)
+    mon_env_eric(a,config,files)
 
 #@mkdocs.plugins.event_priority(-50)
 def on_page_markdown(markdown, page, **kwargs):
@@ -40,7 +40,7 @@ def on_page_markdown(markdown, page, **kwargs):
     return markdown
 
 #@mkdocs.plugins.event_priority(-50)
-def on_env_eric(env, config, files):
+def mon_env_eric(env, config, files):
     # Génère le fichier glossaire.md
     glossaire_md = Path("docs/glossaire.md")
     with glossaire_md.open("a", encoding="utf-8") as f:

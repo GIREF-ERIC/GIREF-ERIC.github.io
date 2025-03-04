@@ -31,3 +31,7 @@ markdown_extensions:
 
 plugins:
   - search
+  - markdownextradata
+
+hooks:
+  - docs/macros_doc_mefpp.py

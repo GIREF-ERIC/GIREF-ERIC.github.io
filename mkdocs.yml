@@ -5,6 +5,7 @@ theme:
 nav:
   - Accueil: index.md
   - Guide:
+      - Guide: guide/index.md
       - "Introduction": guide/introduction.md
       - "Installation": guide/installation.md
       - "Utilisation": guide/utilisation.md

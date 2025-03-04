@@ -5,6 +5,10 @@ on:
     branches:
       - main  # Déclenchement sur `main`
 
+
+permissions:
+  contents: write  # Donne les permissions nécessaires
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -22,4 +26,6 @@ jobs:
         run: pip install mkdocs-material
 
       - name: Deploy MkDocs
-        run: mkdocs gh-deploy --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Ajoute le token d’authentification
+        run: mkdocs gh-deploy --force --remote-branch gh-pages

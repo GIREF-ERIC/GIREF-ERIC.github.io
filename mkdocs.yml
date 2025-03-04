@@ -2,6 +2,9 @@ site_name: Documentation GIREF
 site_url: https://GIREF-ERIC.github.io/
 theme:
   name: material
+  features:
+    - toc.integrate
+
 nav:
   - Accueil: index.md
   - Guide:

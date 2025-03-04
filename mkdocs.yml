@@ -5,7 +5,6 @@ theme:
 nav:
   - Accueil: index.md
   - Guide:
-      - link: guide/index.md  # 👈 Ceci force "Guide" à être un lien !
       - "Introduction": guide/introduction.md
       - "Installation": guide/installation.md
       - "Utilisation": guide/utilisation.md

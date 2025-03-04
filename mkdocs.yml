@@ -5,6 +5,7 @@ theme:
   name: material
   features:
     - toc.integrate
+    - navigation.tabs
 
 nav:
   - Accueil: index.md

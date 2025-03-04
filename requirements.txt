@@ -1,0 +1,5 @@
+Pygments
+mkdocs
+mkdocs-material>=5.0.0
+mkdocs-macros-plugin
+mkdocs-git-revision-date-localized-plugin

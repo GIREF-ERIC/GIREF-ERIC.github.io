@@ -29,11 +29,13 @@ def on_page_markdown(markdown, page, **kwargs):
 def on_post_build(config):
     # Génère le fichier glossaire.md
     glossaire_md = Path("docs/glossaire.md")
-    glossaire_md.write_text("mon glossaire de termes traduits", encoding="utf-8")
-    glossaire_md.write_text("\n\n".join(GLOSSAIRE.values()), encoding="utf-8")
+    with glossaire_md.open("w", encoding="utf-8") as f:
+      f.write("mon glossaire de termes traduits\n\n", encoding="utf-8")
+      f.write("\n\n".join(GLOSSAIRE.values()), encoding="utf-8")
 
     # Génère un fichier des termes à ne pas traduire
     termes_sans_traduction_md = Path("docs/termes_sans_traduction.txt")
-    termes_sans_traduction_md.write_text("mon glossaire de termes NON-traduits", encoding="utf-8")
-    termes_sans_traduction_md.write_text("\n".join(TERMES_SANS_TRADUCTION), encoding="utf-8")
+    with termes_sans_traduction_md.open("w", encoding="utf-8") as f:
+      f.write_text("mon glossaire de termes NON-traduits\n\n", encoding="utf-8")
+      f.write_text("\n".join(TERMES_SANS_TRADUCTION), encoding="utf-8")
 

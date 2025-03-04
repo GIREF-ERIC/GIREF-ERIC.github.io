@@ -37,7 +37,7 @@ def on_page_markdown(markdown, page, **kwargs):
     return markdown
 
 @mkdocs.plugins.event_priority(-50)
-def on_post_build(config):
+def on_env(env, config, files):
     # Génère le fichier glossaire.md
     glossaire_md = Path("docs/glossaire.md")
     with glossaire_md.open("a", encoding="utf-8") as f:

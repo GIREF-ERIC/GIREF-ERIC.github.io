@@ -7,10 +7,7 @@ theme:
 
 nav:
   - Accueil: index.md
-  - Guide:
-      - "Introduction": guide/introduction.md
-      - "Installation": guide/installation.md
-      - "Utilisation": guide/utilisation.md
+  - Guide: guide/index.md
   - Développeur:
       - "API C++": api.md
       - "FAQ": faq.md

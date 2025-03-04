@@ -5,7 +5,8 @@ import re
 GLOSSAIRE = {}
 TERMES_SANS_TRADUCTION = set()
 
-def sur_page_markdown(markdown, page, config, fichiers):
+@mkdocs.plugins.event_priority(-50)
+def on_page_markdown(markdown, page, **kwargs):
     global GLOSSAIRE, TERMES_SANS_TRADUCTION
 
     # Gestion des termes à inclure dans le glossaire
@@ -24,7 +25,7 @@ def sur_page_markdown(markdown, page, config, fichiers):
 
     return markdown
 
-def avant_construction(config):
+def on_pre_build(config):
     # Génère le fichier glossaire.md
     glossaire_md = Path("docs/glossaire.md")
     glossaire_md.write_text("\n\n".join(GLOSSAIRE.values()), encoding="utf-8")
@@ -33,8 +34,3 @@ def avant_construction(config):
     termes_sans_traduction_md = Path("docs/termes_sans_traduction.txt")
     termes_sans_traduction_md.write_text("\n".join(TERMES_SANS_TRADUCTION), encoding="utf-8")
 
-# Plugin hook pour MkDocs
-hooks = {
-    "on_page_markdown": sur_page_markdown,
-    "on_pre_build": avant_construction
-}

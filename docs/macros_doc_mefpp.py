@@ -5,6 +5,17 @@ import re
 GLOSSAIRE = {}
 TERMES_SANS_TRADUCTION = set()
 
+# Créer le fichier vide (glossaire.md) avant le build
+@mkdocs.plugins.event_priority(-50)
+def on_pre_build(config):
+    # Créer le fichier vide glossaire.md
+    glossaire_md = Path("docs/glossaire.md")
+    glossaire_md.write_text("", encoding="utf-8")
+
+    # Créer le fichier vide termes_sans_traduction.txt
+    termes_sans_traduction_md = Path("docs/termes_sans_traduction.md")
+    termes_sans_traduction_md.write_text("", encoding="utf-8")
+
 @mkdocs.plugins.event_priority(-50)
 def on_page_markdown(markdown, page, **kwargs):
     global GLOSSAIRE, TERMES_SANS_TRADUCTION
@@ -29,13 +40,13 @@ def on_page_markdown(markdown, page, **kwargs):
 def on_post_build(config):
     # Génère le fichier glossaire.md
     glossaire_md = Path("docs/glossaire.md")
-    with glossaire_md.open("w", encoding="utf-8") as f:
+    with glossaire_md.open("a", encoding="utf-8") as f:
       f.write("mon glossaire de termes traduits\n\n", encoding="utf-8")
       f.write("\n\n".join(GLOSSAIRE.values()), encoding="utf-8")
 
     # Génère un fichier des termes à ne pas traduire
     termes_sans_traduction_md = Path("docs/termes_sans_traduction.md")
-    with termes_sans_traduction_md.open("w", encoding="utf-8") as f:
-      f.write_text("mon glossaire de termes NON-traduits\n\n", encoding="utf-8")
-      f.write_text("\n".join(TERMES_SANS_TRADUCTION), encoding="utf-8")
+    with termes_sans_traduction_md.open("a", encoding="utf-8") as f:
+      f.write("mon glossaire de termes NON-traduits\n\n", encoding="utf-8")
+      f.write("\n".join(TERMES_SANS_TRADUCTION), encoding="utf-8")
 

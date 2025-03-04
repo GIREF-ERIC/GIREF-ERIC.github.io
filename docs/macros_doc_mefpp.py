@@ -25,6 +25,7 @@ def on_page_markdown(markdown, page, **kwargs):
 
     return markdown
 
+@mkdocs.plugins.event_priority(-50)
 def on_pre_build(config):
     # Génère le fichier glossaire.md
     glossaire_md = Path("docs/glossaire.md")

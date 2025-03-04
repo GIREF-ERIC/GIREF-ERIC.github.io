@@ -1,5 +1,6 @@
 site_name: Documentation GIREF
 site_url: https://GIREF-ERIC.github.io/
+
 theme:
   name: material
   features:
@@ -27,5 +28,6 @@ markdown_extensions:
       permalink: true
   - attr_list
   - md_in_html
+
 plugins:
   - search

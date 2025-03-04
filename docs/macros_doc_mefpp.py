@@ -7,7 +7,7 @@ TERMES_SANS_TRADUCTION = set()
 
 # Créer le fichier vide (glossaire.md) avant le build
 #@mkdocs.plugins.event_priority(-50)
-def on_pre_build(config):
+def on_config(config):
     # Créer le fichier vide glossaire.md
     glossaire_md = Path("docs/glossaire.md")
     glossaire_md.write_text("", encoding="utf-8")

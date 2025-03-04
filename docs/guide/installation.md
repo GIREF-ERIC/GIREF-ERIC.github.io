@@ -1,1 +1,3 @@
 # Installation
+
+on veut AppImage

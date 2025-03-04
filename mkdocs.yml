@@ -4,8 +4,8 @@ theme:
   name: material
 nav:
   - Accueil: index.md
-  - Guide:
-      - Guide: guide/index.md
+  - Guide: guide.md  # Rend "Guide" cliquable et affiche guide.md
+  - Guide (détails):  # Sous-sections
       - "Introduction": guide/introduction.md
       - "Installation": guide/installation.md
       - "Utilisation": guide/utilisation.md

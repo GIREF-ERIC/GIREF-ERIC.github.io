@@ -1,4 +1,4 @@
-from mkdocs.plugins
+import mkdocs.plugins
 from pathlib import Path
 import re
 

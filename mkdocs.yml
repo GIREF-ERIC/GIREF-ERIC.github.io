@@ -12,6 +12,7 @@ nav:
   - Développeur:
       - "API C++": api.md
       - "FAQ": faq.md
+  - Glossaire: glossaire.md
 
 # Définition des sous-sections SANS les afficher en double dans le menu principal
 extra:

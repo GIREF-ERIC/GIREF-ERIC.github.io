@@ -15,6 +15,9 @@ def on_pre_build(config):
     # Créer le fichier vide termes_sans_traduction.txt
     termes_sans_traduction_md = Path("docs/termes_sans_traduction.md")
     termes_sans_traduction_md.write_text("", encoding="utf-8")
+    a=1
+    files=1
+    on_env_eric(a,config,files)
 
 #@mkdocs.plugins.event_priority(-50)
 def on_page_markdown(markdown, page, **kwargs):
@@ -37,7 +40,7 @@ def on_page_markdown(markdown, page, **kwargs):
     return markdown
 
 #@mkdocs.plugins.event_priority(-50)
-def on_env(env, config, files):
+def on_env_eric(env, config, files):
     # Génère le fichier glossaire.md
     glossaire_md = Path("docs/glossaire.md")
     with glossaire_md.open("a", encoding="utf-8") as f:

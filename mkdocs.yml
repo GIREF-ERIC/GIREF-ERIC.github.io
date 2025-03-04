@@ -1,100 +1,20 @@
-site_name: Documentation MEF++
-
-nav:
-    - Accueil: index.md
-    - Utilisateur MEF++:
-      - Installer MEF++/iMEF++:
-         - Sous Linux:
-            - 'AppImage': 'Utilisateur MEF++/Installer_MEF++_iMEF++/Sous_linux/AppImage.md'
-            - 'Docker' : 'Utilisateur MEF++/Installer_MEF++_iMEF++/Sous_linux/Docker.md'
-         - Sous Windows:
-            - 'AppImage' : 'Utilisateur MEF++/Installer_MEF++_iMEF++/Sous Windows/AppImage.md'
-            - 'Docker' : 'Utilisateur MEF++/Installer_MEF++_iMEF++/Sous Windows/Docker.md'
-         - Sous Mac OSX: Utilisateur MEF++/Installer_MEF++_iMEF++/Sous Mac OSX/Installation MEF++ Mac OSX.md
-         - Sur Calcul Canada: 'Utilisateur MEF++/Installer_MEF++_iMEF++/Sous_linux/Calcul_Canada.md'
-      - Apprendre MEF++:
-         - 'Tableau de bord': 'Utilisateur MEF++/Apprendre MEF++/Tableau_de_bord.md'
-         - 'Grands Concepts': 'Utilisateur MEF++/Apprendre MEF++/GrandsConcepts/GrandsConcepts.md'
-         - 'Génération de maillage': 'Utilisateur MEF++/Apprendre MEF++/Generation_maillage/Generation_de_maillage.md'
-         - 'Didacticiel': 'Utilisateur MEF++/Apprendre MEF++/Didacticiel/Didacticiel.md'
-         - 'Adaptation de maillage' : 'Utilisateur MEF++/Apprendre MEF++/Adaptation_de_maillage.md'
-      - Référence MEF++:
-         - 'Champs' : 'Utilisateur MEF++/Reference_MEF++/Champs/Champs.md'
-         - 'Expressions algébriques et opérations' : 'Utilisateur MEF++/Reference_MEF++/OperationsExpressionAlgebrique/Operations.md'
-         - 'Entités Géométriques' : 'Utilisateur MEF++/Reference_MEF++/EntiteGeometrique/Entite_geometrique.md'
-         - 'Exportation': 'Utilisateur MEF++/Reference_MEF++/Exportation/Exportation.md'
-         - Format de fichiers:
-           - 'Fichier .champs': 'Utilisateur MEF++/Reference_MEF++/Formatdefichiers/Fichierchamps.md'
-         - Exemples GMSH : 'Utilisateur MEF++/Reference_MEF++/Exemples_GMSH/Exemples_GMSH.md'
-         - ParaView : 'Utilisateur MEF++/Reference_MEF++/ParaView/ParaView.md'
-         - Solveurs : 'Utilisateur MEF++/Reference_MEF++/Solveurs/Solveurs.md'
-         - Pre-PostTraitement: 'Utilisateur MEF++/Reference_MEF++/Pre-PostTraitement/PrePostTraitement.md'
-         - Conditions aux Limites: 'Utilisateur MEF++/Reference_MEF++/ConditionsLimites.md'
-      - Installations des logiciels requis par MEF++:
-             - Utilisateur MEF++/Installations des logiciels requis par MEF++/Instalation iMEF++.md
-             - Utilisateur MEF++/Installations des logiciels requis par MEF++/autres.md
-      - Utiliser MEF++:
-         - Utilisateur MEF++/Utiliser_MEF++/Format des fichiers .champs et .CL.md
-    - Développeur MEF++:
-      - Compiler MEF++: 'Developpeur/Compilation_de_MEF++.md'
-      - Normes de progammation: 'Developpeur/Normes_de_programmation.md'
-      - Règles pour les messages de commit : 'Developpeur/Regles_messages_commit.md'
-      - Les tests de validation: 'Developpeur/Cree_test_validation.md'
-      - Revue de code: 'Developpeur/Revue_code.md'
-      - Ressources utiles :
-         - 'QtCreator' : 'Developpeur/Ressources_utiles/QtCreator.md'
-         - 'Clés SSH'  : 'Developpeur/Ressources_utiles/Cles_SSH.md'
-      - eMEF++: 'Developpeur/eMEF++/eMEF++.md'
-      - PyMEFPP: 'Developpeur/Python/PyMEFPP.md'
-    - Liens externes: Liens_externes.md
-    - Bac à sable: test.md
-    - Exemples de Syntaxe: Exemples_de_Syntaxe.md
-    - liens vers d'autres pages : Liens a verifier.md
-
+site_name: Documentation GIREF
+site_url: https://GIREF-ERIC.github.io/
 theme:
-  name: 'material'
-  language: 'fr'
-  palette:
-     primary: 'blue grey'
-     accent: 'blue'
-  icon:
-    logo: fontawesome/solid/book-open-reader
-    repo: fontawesome/brands/gitlab
-  feature:
-    - instant
-#    - tabs
-
+  name: material
+nav:
+  - Accueil: index.md
+  - Guide:
+      - "Introduction": guide/introduction.md
+      - "Installation": guide/installation.md
+      - "Utilisation": guide/utilisation.md
+  - Développeur:
+      - "API C++": api.md
+      - "FAQ": faq.md
 markdown_extensions:
-  - attr_list
-  - admonition
-  - codehilite:
-      guess_lang: false
-  - meta
-  - sane_lists
-  - pymdownx.critic
-  - pymdownx.inlinehilite
-  - pymdownx.arithmatex
-  - pymdownx.superfences
-  - pymdownx.magiclink
-  - pymdownx.tilde
   - toc:
       permalink: true
-
-extra_javascript:
-    - 'javascripts/extra_mathjax.js'
-    - 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js'
-
-extra_css:
-    - 'css/extra.css'
-
-# Customization
-extra:
-  manifest: 'manifest.webmanifest'
-  social:
-    - icon: fontawesome/brands/gitlab
-
+  - attr_list
+  - md_in_html
 plugins:
   - search
-  - git-revision-date-localized
-  - macros:
-          module_name: module

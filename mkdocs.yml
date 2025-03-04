@@ -13,6 +13,7 @@ nav:
       - "API C++": api.md
       - "FAQ": faq.md
   - Glossaire: glossaire.md
+  - Glossaire non traduit: termes_sans_traduction.md
 
 # Définition des sous-sections SANS les afficher en double dans le menu principal
 extra:

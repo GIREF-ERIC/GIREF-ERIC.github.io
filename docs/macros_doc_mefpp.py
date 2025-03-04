@@ -6,7 +6,7 @@ GLOSSAIRE = {}
 TERMES_SANS_TRADUCTION = set()
 
 # Créer le fichier vide (glossaire.md) avant le build
-@mkdocs.plugins.event_priority(-50)
+#@mkdocs.plugins.event_priority(-50)
 def on_pre_build(config):
     # Créer le fichier vide glossaire.md
     glossaire_md = Path("docs/glossaire.md")
@@ -16,7 +16,7 @@ def on_pre_build(config):
     termes_sans_traduction_md = Path("docs/termes_sans_traduction.md")
     termes_sans_traduction_md.write_text("", encoding="utf-8")
 
-@mkdocs.plugins.event_priority(-50)
+#@mkdocs.plugins.event_priority(-50)
 def on_page_markdown(markdown, page, **kwargs):
     global GLOSSAIRE, TERMES_SANS_TRADUCTION
 
@@ -36,7 +36,7 @@ def on_page_markdown(markdown, page, **kwargs):
 
     return markdown
 
-@mkdocs.plugins.event_priority(-50)
+#@mkdocs.plugins.event_priority(-50)
 def on_env(env, config, files):
     # Génère le fichier glossaire.md
     glossaire_md = Path("docs/glossaire.md")

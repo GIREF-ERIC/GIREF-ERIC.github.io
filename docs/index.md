@@ -8,4 +8,4 @@ Le {{glossaire:GIREF}} est un centre de Recherche de l'{{glossaire_sans_traducti
 
 Le français est une si belle langue, parfois négligée au détriment du rêve américain... qui devient un cauchemard...
 
-Que devrions nous faire?  voir [ici]{#ici-on-parle-français}
+Que devrions nous faire?  voir [ici](#ici-on-parle-français)

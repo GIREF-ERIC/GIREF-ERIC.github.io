@@ -28,6 +28,9 @@ extra:
 markdown_extensions:
   - toc:
       permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify  # MD051 : Ceci nous permet que les ancrages créés à partir des "titres" restent en UTF-8.
+        kwds:                                                # Par exemple, "## Communiquer la clé publique" peut être référé par "[lien](#communiquer-la-clé-publique)".  Sinon ça serait "[lien](#communiquer-la-cle-publique)",
+          case: lower                                        # et alors la règle MD051 de markdownlint ne serait pas utilisable!!!
   - attr_list
   - md_in_html
 
